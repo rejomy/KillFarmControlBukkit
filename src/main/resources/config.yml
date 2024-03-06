@@ -1,0 +1,51 @@
+# Check section:
+# Configure all modules of check.
+# If you want to disable check, just set a violation value to negative or zero.
+check:
+  same:
+    # killer ip address sames with victim
+    ip: 1
+    # killer name sames with victim
+    name:
+      violation: 1
+      similarity percent: 80
+    # kill time sames with other victim kills time.
+    time:
+      violation: 1
+      min values: 5
+    location: 1
+
+  kills per victim:
+    # Time format:
+    # d - day, h - hour, m - minute, s - second
+    time: 1h
+    kills: 10
+    violation: 1
+
+# Action section:
+# You can configure player punishment here.
+action:
+  # group name
+  group1:
+    # List of modules join in the group
+    module:
+      - ip
+      - name
+      - time
+      - location
+      - deaths
+    # How we can punish the farmer?
+    # format n-x: command
+    # n - how to violation have for run this action
+    # -x - how amount violation need for repeat this action
+    threshold:
+      1-999: tell $killer Please don`t farm a kills!
+      2-1: cancel
+
+# cancel - kill has not added to a statistic
+# command - You can add any commands to a threshold.
+# You can use $killer for get killer name.
+
+# Worlds in which the plugin will not work.
+ignore worlds:
+  - duels

@@ -1,0 +1,7 @@
+name: KillControl
+version: 1.0
+main: me.rejomy.killcontrol.Main
+commands:
+  killcontrol:
+    permission-message: You don`t have permission for perform this command.
+    permission: killcontrol.command
