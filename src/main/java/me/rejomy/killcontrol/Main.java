@@ -1,6 +1,5 @@
 package me.rejomy.killcontrol;
 
-import me.rejomy.killcontrol.check.CheckManager;
 import me.rejomy.killcontrol.command.KillControlCommand;
 import me.rejomy.killcontrol.listener.ConnectionListener;
 import me.rejomy.killcontrol.listener.EntityDamageListener;
